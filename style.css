@@ -1,0 +1,120 @@
+* {
+  margin: 0%;
+  padding: 0;
+}
+
+.container {
+  /* border: 1px solid red; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url(./cool-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  opacity: 0.5;
+}
+.weather {
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+.weather > div {
+  margin: 0.65rem;
+}
+
+.weather1 {
+  font-size: 3.5rem;
+  display: block;
+  text-align: center;
+  left: 0px;
+  margin: 20px;
+}
+.weather p {
+  font-size: 2rem;
+}
+.weather span {
+  font-size: 1.2rem;
+}
+.weather3 img {
+  height: 4.8rem;
+  width: 5.5rem;
+  /* border: 1px solid black */
+}
+
+.weather3 span {
+  /* border: 1px solid black; */
+  margin: 1.1555rem;
+  font: bold 1.5rem "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+nav {
+  height: 100px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0%;
+  border-radius: 100px 100px 0 0;
+  padding: 1rem 0;
+
+  width: 100%;
+  background-color: rgba(180, 177, 177, 0.075);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav form {
+  width: 70%;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+.search {
+  font-size: 1.2rem;
+  padding: 10px;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0px 5px 10px black;
+  width: 99%;
+  border-radius: 25px 0 0 25px;
+}
+nav form button {
+  font-size: 1.1rem;
+  padding: 10px;
+  background-color: rgba(19, 19, 53, 0.63);
+  box-shadow: 0px 5px 10px black;
+  border-radius: 0 25px 25px 0;
+  color: white;
+}
+nav form button:hover {
+  transform: scale(1.09);
+  background-color: transparent;
+}
+
+/* form input {
+  padding: 10px 30px;
+  outline: none;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+button {
+  border: none;
+  padding: 10px;
+  font: bold 0.9rem san-sarif;
+  background-color: rgb(134, 148, 143);
+} */
