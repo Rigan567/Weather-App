@@ -7,24 +7,28 @@ const weatherField = document.querySelector(".weather3 span");
 const form = document.querySelector("form");
 const btn = document.querySelector("button");
 
-let target = "location.now";
+let target = "Chittagong";
 
 const fetchData = async (target) => {
-  const url = `https://api.weatherapi.com/v1/current.json?key=dd2d2c52545f4fe6a1e204119240301&q=${target}`;
+  try {
+    const url = `https://api.weatherapi.com/v1/current.json?key=dd2d2c52545f4fe6a1e204119240301&q=${target}`;
 
-  const response = await fetch(url);
-  const data = await response.json();
-  // console.log(data);
+    const response = await fetch(url);
+    const data = await response.json();
+    // console.log(data);
 
-  const {
-    current: {
-      temp_c,
-      condition: { text, icon },
-    },
-    location: { name, localtime },
-  } = data;
+    const {
+      current: {
+        temp_c,
+        condition: { text, icon },
+      },
+      location: { name, localtime },
+    } = data;
 
-  updateDom(temp_c, name, icon, text, localtime);
+    updateDom(temp_c, name, icon, text, localtime);
+  } catch (error) {
+    alert("Location Not Found");
+  }
 };
 
 const updateDom = (temperature, city, emoji, text, date) => {
