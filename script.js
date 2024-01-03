@@ -7,7 +7,7 @@ const weatherField = document.querySelector(".weather3 span");
 const form = document.querySelector("form");
 const btn = document.querySelector("button");
 
-let target = "Chittagong";
+let target = "Dhaka";
 
 const fetchData = async (target) => {
   try {
